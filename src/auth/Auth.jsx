@@ -17,7 +17,7 @@ export const Auth = () => {
     const { email, password } = data
     const auth = getAuth()
 
-    if (type == 'login') {
+    if (type === 'login') {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
